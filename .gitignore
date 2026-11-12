@@ -1,0 +1,11 @@
+# .gitignore
+venv/
+__pycache__/
+*.pkl
+.ipynb_checkpoints/
+.DS_Store
+
+# Ignore all data files except the data dictionary
+data/raw/*
+data/processed/*
+!data/data_dictionary.md
