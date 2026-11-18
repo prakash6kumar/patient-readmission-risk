@@ -60,7 +60,6 @@ class ReadmissionDataPipeline:
         """
         logging.info("Applying basic pre-processing...")
         
-        # Encounter ID is a unique event identifier; Patient Nbr is the patient.
         # Dropping Encounter ID as it has no predictive value.
         df = df.drop(columns=['encounter_id'])
         

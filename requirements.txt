@@ -6,3 +6,4 @@ shap
 matplotlib
 seaborn
 jupyterlab
+imbalanced-learn
