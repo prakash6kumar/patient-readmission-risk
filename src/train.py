@@ -21,8 +21,8 @@ def clean_feature_names(df: pd.DataFrame) -> pd.DataFrame:
 
 def train_and_evaluate():
     logging.info("Loading modeling-ready datasets...")
-    X_train = pd.read_csv('../data/processed/X_train_balanced.csv')
-    y_train = pd.read_csv('../data/processed/y_train_balanced.csv').squeeze()
+    X_train = pd.read_csv('../data/processed/X_train.csv')
+    y_train = pd.read_csv('../data/processed/y_train.csv').squeeze()
     X_test = pd.read_csv('../data/processed/X_test.csv')
     y_test = pd.read_csv('../data/processed/y_test.csv').squeeze()
 
@@ -35,9 +35,9 @@ def train_and_evaluate():
         n_estimators=300,
         learning_rate=0.05,
         num_leaves=31,
-        max_depth=-1,
         subsample=0.8,
         colsample_bytree=0.8,
+        class_weight='balanced',
         random_state=42,
         n_jobs=-1
     )
